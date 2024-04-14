@@ -5,8 +5,7 @@
     Args:
         count: number of packets to capture. 0 means infinity.
         store: whether to store sniffed packets or discard them
-        prn: function to apply to each packet. If something is returned, it
-             is displayed.
+        prn: function to apply to each packet. If something is returned, it is displayed.
              --Ex: prn = lambda x: x.summary()
         session: a session = a flow decoder used to handle stream of packets.
                  --Ex: session=TCPSession
@@ -21,16 +20,13 @@
                  (default: False).
         timeout: stop sniffing after a given time (default: None).
         L2socket: use the provided L2socket (default: use conf.L2listen).
-        opened_socket: provide an object (or a list of objects) ready to use
-                      .recv() on.
-        stop_filter: Python function applied to each packet to determine if
-                     we have to stop the capture after this packet.
+        opened_socket: provide an object (or a list of objects) ready to use .recv() on.
+        stop_filter: Python function applied to each packet to determine if we have to stop the capture after this packet.
                      --Ex: stop_filter = lambda x: x.haslayer(TCP)
         iface: interface or list of interfaces (default: None for sniffing
                on all interfaces).
         monitor: use monitor mode. May not be available on all OS
-        started_callback: called as soon as the sniffer starts sniffing
-                          (default: None).
+        started_callback: called as soon as the sniffer starts sniffing(default: None).
 
     The iface, offline and opened_socket parameters can be either an
     element, a list of elements, or a dict object mapping an element to a
