@@ -56,3 +56,13 @@
       >>> print("nice weather today")
       >>> t.stop()
     """
+
+# TCP Flags
+- F -> FIN(0x01)
+- S -> SYN(0x02)
+- R -> RST(0x04)
+- P -> PSH(0x08)
+- A -> ACK(0x10)
+- U -> URG(0x20)
+- E -> ECE(0x40)
+- C -> CWR(0x80)
