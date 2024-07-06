@@ -1,7 +1,7 @@
 import socket
 
 target_host = "localhost"
-target_port = 8080
+target_port = 8088
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 

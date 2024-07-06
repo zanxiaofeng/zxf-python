@@ -1,8 +1,8 @@
 import socket
-import threading
+import time
 
 IP = "0.0.0.0"
-PORT = 8080
+PORT = 8088
 
 def main():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -11,10 +11,14 @@ def main():
     print(f'[*] Listening on {IP}:{PORT}')
 
     while True:
-        client, address = server.accept()
-        print(f'[*] Accepted connection from {address[0]}:{address[1]}')
-        client_handler = threading.Thread(target=handle_client, args=(client,))
-        client_handler.start()
+        time.sleep(5)
+
+    #     client, address = server.accept()
+    #     print(f'[*] Accepted connection from {address[0]}:{address[1]}')
+    #     client_handler = threading.Thread(target=handle_client, args=(client,))
+    #     client_handler.start()
+
+
 
 def handle_client(client_socket):
     with client_socket as sock:
