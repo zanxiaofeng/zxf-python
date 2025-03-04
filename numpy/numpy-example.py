@@ -4,6 +4,7 @@ np.array([1,2,3])
 np.zeros((2,3))
 ar = np.ones((2,2,1))
 ar.shape
+type(ar)
 np.arange(3,7)
 np.linspace(0,1,5)
 
@@ -38,6 +39,7 @@ ar1 - 1
 ar1 * 2
 ar1 / 2
 ar1 % 2
+ar1 > 1
 
 
 
@@ -59,3 +61,14 @@ np.float64
 bool
 str
 
+
+X = np.array([[51,55],[14,19],[0,4]])
+X[0]
+X[0][1]
+
+for row in X:
+    print(row)
+
+x = X.flatten()
+x[np.array([0,2,4])]
+x[x>15]
